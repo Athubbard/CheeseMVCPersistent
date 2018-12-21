@@ -11,5 +11,10 @@ namespace CheeseMVC.Models
         public string Name { get; set; }
 
         IList<CheeseMenu> CheeseMenus = new List<CheeseMenu>();
+
+        public static implicit operator string(Menu v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
