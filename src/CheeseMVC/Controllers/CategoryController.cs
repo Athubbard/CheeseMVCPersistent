@@ -20,6 +20,7 @@ namespace CheeseMVC.Controllers
             context = dbContext;
         }
         // GET: /<controller>/
+        [HttpGet]
         public IActionResult Index()
         {
             return View(context.Categories.ToList());
