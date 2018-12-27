@@ -10,19 +10,19 @@ namespace CheeseMVC.ViewModels
 {
     public class AddMenuItemViewModel
     {
-        internal object cheese;
+        
 
         [Required]
         [Display(Name = "Cheese")]
         public int cheeseID { get; set; }
         public int menuID { get; set; }
 
-        public Menu Menu { get; set; }
+        public menu Menu { get; set; }
         public List<SelectListItem> Cheeses { get; set; }
 
         public AddMenuItemViewModel() { }
 
-        public AddMenuItemViewModel(Menu aMenu, IEnumerable<Cheese> theSelectListCheeses)
+        public AddMenuItemViewModel(menu aMenu, IEnumerable<Cheese> theSelectListCheeses)
         {
             Menu = aMenu;
             Cheeses = new List<SelectListItem>();

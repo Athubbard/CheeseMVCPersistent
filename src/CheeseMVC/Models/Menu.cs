@@ -5,16 +5,12 @@ using System.Threading.Tasks;
 
 namespace CheeseMVC.Models
 {
-    public class Menu
+    public class menu
     {
         public int ID { get; set; }
         public string Name { get; set; }
 
-        IList<CheeseMenu> CheeseMenus = new List<CheeseMenu>();
-
-        public static implicit operator string(Menu v)
-        {
-            throw new NotImplementedException();
-        }
+        IList<CheeseMenu> CheeseMenus { get; set; }
     }
 }
+
