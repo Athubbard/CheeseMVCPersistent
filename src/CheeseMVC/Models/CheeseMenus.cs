@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace CheeseMVC.Models
 {
-    public class CheeseMenu
+    public class CheeseMenus
     {
         public int MenuID { get; set; }
-        public menu Menu { get; set; }
+        public Menu Menu { get; set; }
 
         public int CheeseID { get; set; }
         public Cheese Cheese { get; set; }

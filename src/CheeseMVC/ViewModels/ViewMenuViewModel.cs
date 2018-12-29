@@ -15,8 +15,8 @@ namespace CheeseMVC.ViewModels
         public int cheeseID { get; set; }
         public int menuID { get; set; }
 
-        public string Menu { get; set; }
+        public Menu Menu { get; set; }
         public string Name { get; set; }
-        public IList<CheeseMenu> Items { get; set; }
+        public IList<CheeseMenus> Items { get; set; }
     }
 }

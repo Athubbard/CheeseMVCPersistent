@@ -50,7 +50,7 @@ namespace CheeseMVC.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("CheeseMVC.Models.CheeseMenu", b =>
+            modelBuilder.Entity("CheeseMVC.Models.CheeseMenus", b =>
                 {
                     b.Property<int>("CheeseID");
 
@@ -60,7 +60,7 @@ namespace CheeseMVC.Migrations
 
                     b.HasIndex("MenuID");
 
-                    b.ToTable("CheeseMenu");
+                    b.ToTable("CheeseMenus");
                 });
 
             modelBuilder.Entity("CheeseMVC.Models.Menu", b =>
@@ -84,7 +84,7 @@ namespace CheeseMVC.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("CheeseMVC.Models.CheeseMenu", b =>
+            modelBuilder.Entity("CheeseMVC.Models.CheeseMenus", b =>
                 {
                     b.HasOne("CheeseMVC.Models.Cheese", "Cheese")
                         .WithMany()
@@ -92,7 +92,7 @@ namespace CheeseMVC.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("CheeseMVC.Models.Menu", "Menu")
-                        .WithMany()
+                        .WithMany("CheeseMenus")
                         .HasForeignKey("MenuID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CheeseMVC.Models.menu>
+﻿@model IEnumerable<CheeseMVC.Models.Menu>
 
 <h2>Menus</h2>
 <p><a asp-controller="Menu" asp-action="Add">Add Menu</a></p>
@@ -11,3 +11,5 @@
         </li>
     }
 </ul>
+
+<a asp-controller="CheeseMenu" asp-action="Add">Add</a> | <a asp-controller="Cheese" asp-action="Remove">Remove</a>
