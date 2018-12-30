@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CheeseMVC.Migrations
 {
     [DbContext(typeof(CheeseDbContext))]
-    [Migration("20181229195548_AddMenu")]
+    [Migration("20181230000010_AddMenu")]
     partial class AddMenu
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,7 +52,7 @@ namespace CheeseMVC.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("CheeseMVC.Models.CheeseMenus", b =>
+            modelBuilder.Entity("CheeseMVC.Models.CheeseMenu", b =>
                 {
                     b.Property<int>("CheeseID");
 
@@ -86,10 +86,10 @@ namespace CheeseMVC.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("CheeseMVC.Models.CheeseMenus", b =>
+            modelBuilder.Entity("CheeseMVC.Models.CheeseMenu", b =>
                 {
                     b.HasOne("CheeseMVC.Models.Cheese", "Cheese")
-                        .WithMany()
+                        .WithMany("CheeseMenus")
                         .HasForeignKey("CheeseID")
                         .OnDelete(DeleteBehavior.Cascade);
 

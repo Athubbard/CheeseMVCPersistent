@@ -10,9 +10,9 @@ namespace CheeseMVC.ViewModels
 {
     public class AddMenuItemViewModel
     {
-        public int cheeseID { get; set; }
+
         public int menuID { get; set; }
-        
+        public int cheeseID { get; set; }
         
 
         public Menu Menu { get; set; }
